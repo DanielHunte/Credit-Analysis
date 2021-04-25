@@ -3,6 +3,20 @@
 ## Goal
 build a classification model to determine whether or not a loan applicant will receive a loan given some data about the loan and some objective data about an individual
 
+## Running This Notebook
+### Steps
+```
+python3 -m venv ./venv
+source venv/bin/activate
+pip install -r requirements.txt
+
+# open this notebook in a Jupyter processor
+```
+### Links
+- download [python3.9.4](https://www.python.org/downloads/release/python-394/)
+- download [VSCode and its Jupyter processing extension](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter)
+
+
 ## Presenting
 - a 6 minute live presentation will be given to the class
 
@@ -22,7 +36,7 @@ build a classification model to determine whether or not a loan applicant will r
 ## Implementation
 - clean data
     - transform our target dimension into a binary number (simplifying from multiple values to a single value)
-    - for each dimension that has multiple possible string values, we will create a dimension; across each of these new dimensions, only one dimension will have a value of 1, and the rest will have 0's
+    - for each dimension that has multiple possible string values, we will create a dimension using one-hot encoding
 - create a class that represents a test
     - each test contains a training algorithm and arguments to run the training algorithm
     - results of run will be presented as a single-row numpy array (that can be hstacked onto the other results)
