@@ -54,6 +54,7 @@ print("done inserting current samples")
 query_join = f"""
 SELECT *
 FROM prev JOIN curr using(SK_ID_CURR)
+WHERE `NAME_CONTRACT_STATUS` = 'Approved' OR `NAME_CONTRACT_STATUS` = 'Refused'
 LIMIT {max_examples}
 """
 db_df = pandas.read_sql_query(query_join, con)
